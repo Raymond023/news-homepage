@@ -20,26 +20,88 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 body{
+    background-color: var(--Off-white);
     font-family: 'Inter', sans-serif;
     padding: 15px;
+    padding-top: 45px;
 }
-header img, header div img{
+.mobile, header div img{
     max-width: 100%;
+    max-height: 100%;
 }
 header div{
     display: flex;
+    background-color: var(--Off-white);
     justify-content: space-between;
-    margin: 10px 0;
+    height: 68px;
+    padding: 25px 15px 15px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
-ul li{
-    list-style: none;
+nav{
+    background-color: var(--Off-white);
+    
+    position: fixed;
+    top: 0;
+    right: -65%;
+    height: 100vh;
+    padding: 30px;
+    transition: right 0.5s ease-in-out;
+    width: 65%;
+}
+.show{
+
+    right: 0;
+}
+nav li:not(:last-child){
+    margin-bottom: 28px;
+}
+nav a{
+    color: var(--Very-dark-blue);
 }
 nav ul {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 85px;
+}
+button{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    border: transparent;
+    height: 34px;
+    width: 34px;
+}
+.open-nav{
+background-image: url(assets/images/icon-menu.svg);
+}
+.close-nav{
+    background-image: url(assets/images/icon-menu-close.svg);
+    margin-left: 90%;
+}
+.desktop{
+    display: none;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 65%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.379);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: 0.4s ease-out;
+}
+.show-overlay{
+    opacity: 1;
 }
 a{
     text-decoration: none;
@@ -73,12 +135,13 @@ h2{
     margin: 10px 0;
 }
 
-.new hr {
-    background-color: var(--Grayish-blue);
-    border: 0;
-    height: 1px;
-    margin: 25px auto;
+
+.new ul li:not(:last-child){
+    border-bottom: 1px solid var(--Grayish-blue);
+    margin-bottom: 9%;
+    padding-bottom: 9%;
 }
+
 .new a{
     color: var(--Off-white);
     font-weight: 700;
@@ -120,8 +183,104 @@ h2{
 
 h3{
     color: var(--Soft-red);
-    margin-bottom: 5px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
 }
 .featured p{
     color: var(--Dark-grayish-blue);
+    margin-top: 10px;
+}
+/* hover effect */
+main a:hover{
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+}
+.new a:hover{
+    color: var(--Soft-orange);
+}
+.featured a:hover{
+    color: var(--Soft-red);
+}
+
+/* media queries */
+
+@media screen and (min-width:45rem) {
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: inline;
+        max-width: 100%;
+    }
+}
+@media screen and (min-width:60rem) {
+    body{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px 8%;
+        position: relative;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        grid-column: span 3;
+    }
+    header div{
+        height: auto;
+        position: relative;
+        width: max-content;
+    }
+    nav{
+        align-items: center;
+        
+        display: flex;
+        flex-grow: 1;
+        position: static;
+        
+        height: 100%;
+        margin: 0;
+        padding: 0px;
+        max-width: 40%;
+        top: auto;
+        right: auto;
+    }
+
+    nav ul{
+        justify-content: space-between;
+        margin-top: 0;
+        flex-direction: row;
+        width: 100%;
+    }
+    nav li:not(:last-child){
+        margin-bottom: 0;
+    }
+    button{
+        display: none;
+    }
+    main{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-column: span 2;
+        margin: 0;
+    }
+    main section{
+        grid-column: span 2;
+    }
+    h1{
+        font-size: 2.7rem;
+        max-width: 75%;
+    }
+    .new{
+        margin: 0;
+    }
+
+    .featured{
+        grid-column: span 3;
+    }
+    .featured ul{
+        display: flex;
+        flex-direction: row;
+    }
 }
