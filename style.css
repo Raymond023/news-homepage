@@ -29,9 +29,21 @@ body{
     padding: 15px;
     padding-top: 45px;
 }
-.mobile, header div img{
+a{
+    text-decoration: none;
+}
+p{
+    line-height: 22px;
+}
+/* header content */
+
+.mobile, header div a{
     max-width: 100%;
     max-height: 100%;
+}
+header div a{
+    background-image: url(assets/images/logo.svg);
+    background-size: contain;
 }
 header div{
     display: flex;
@@ -46,7 +58,6 @@ header div{
 }
 nav{
     background-color: var(--Off-white);
-    
     position: fixed;
     top: 0;
     right: -65%;
@@ -59,7 +70,7 @@ nav{
 
     right: 0;
 }
-nav li:not(:last-child){
+nav li{
     margin-bottom: 28px;
 }
 nav a{
@@ -70,7 +81,7 @@ nav ul {
     flex-direction: column;
     margin-top: 85px;
 }
-button{
+button, header div a{
     background-repeat: no-repeat;
     background-position: center center;
     background-color: transparent;
@@ -103,12 +114,8 @@ background-image: url(assets/images/icon-menu.svg);
 .show-overlay{
     opacity: 1;
 }
-a{
-    text-decoration: none;
-}
-p{
-    line-height: 22px;
-}
+
+/* body content */
 main{
     display: block;
     margin: 10px auto 30px auto;
@@ -125,6 +132,7 @@ main p{
     line-height: 22px;
     margin-bottom: 30px;
 }
+
 .new{
     background-color: var(--Very-dark-blue);
     margin: 20px auto;
@@ -133,8 +141,9 @@ main p{
 
 h2{
     margin: 10px 0;
+    color: var(--Soft-orange);
+    margin-bottom: 20px;
 }
-
 
 .new ul li:not(:last-child){
     border-bottom: 1px solid var(--Grayish-blue);
@@ -152,10 +161,6 @@ h2{
 .new p{
     color: var(--Grayish-blue);
     margin-top: 10px;
-}
-h2{
-    color: var(--Soft-orange);
-    margin-bottom: 20px;
 }
 
 .featured{
@@ -219,7 +224,7 @@ main a:hover{
         gap: 30px;
         grid-template-columns: repeat(3, 1fr);
         padding: 40px 8%;
-        position: relative;
+        
     }
     header{
         display: flex;
@@ -233,13 +238,10 @@ main a:hover{
     }
     nav{
         align-items: center;
-        
         display: flex;
         flex-grow: 1;
         position: static;
-        
         height: 100%;
-        margin: 0;
         padding: 0px;
         max-width: 40%;
         top: auto;
@@ -252,8 +254,8 @@ main a:hover{
         flex-direction: row;
         width: 100%;
     }
-    nav li:not(:last-child){
-        margin-bottom: 0;
+    nav li{
+        margin: 0;
     }
     button{
         display: none;
@@ -265,7 +267,7 @@ main a:hover{
         grid-column: span 2;
         margin: 0;
     }
-    main section{
+    main img{
         grid-column: span 2;
     }
     h1{
