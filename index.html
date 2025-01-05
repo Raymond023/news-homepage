@@ -14,28 +14,35 @@
   <body>
     <header>
       <div>
-        <a href="/"></a>
-        <button type="button" class="open-nav" aria-label="open navigation"></button>
+        <a class="logo" aria-label="Tech news homepage" href="/"><img src="assets/images/logo.svg" alt=""></a>
+        <button type="button" class="open-nav" aria-haspopup="dialog" aria-label="menu"></button>
       </div>
       
+      <dialog aria-label="primary navigation" aria-modal="true" class="nav-dialog" id="nav-dialog">
+
+        <nav>
+          <button type="button" class="close-nav" aria-label="close menu"></button>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#new">New</a></li>
+            <li><a href="/">Popular</a></li>
+            <li><a href="/">Trending</a></li>
+            <li><a href="/">Categories</a></li>
+          </ul>
+        </nav>
+
+      </dialog>
       
-      <nav aria-label="primary">
-        <button type="button" class="close-nav" aria-label="close navigation"></button>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#new">New</a></li>
-          <li><a href="/">Popular</a></li>
-          <li><a href="/">Trending</a></li>
-          <li><a href="/">Categories</a></li>
-        </ul>
-      </nav>
       
     </header>
-    <div class="overlay"></div>
+    
     <main>
+      <picture>
+        <source srcset="assets/images/image-web-3-desktop.jpg" media="(min-width: 720px)">
+        <source srcset="assets/images/image-web-3-mobile.jpg" media="(min-width: 320px)">
+        <img src="assets/images/image-web-3-mobile.jpg" alt="">
+      </picture>      
       
-      <img class="mobile" src="assets/images/image-web-3-mobile.jpg" alt="mobile hero icon">
-      <img class="desktop" src="assets/images/image-web-3-desktop.jpg" alt="desktop hero icon">
       <h1>The Bright Future of Web 3.0?</h1>
       <div>
       <p>
@@ -45,69 +52,60 @@
       <a href="#">Read more</a>
       </div>
 
+      <section class="new">
+        <h2>New</h2>
+
+        <ul>
+          <li>
+            <a href="/">Hydrogen VS Electric Cars</a>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </li>
+  
+  
+          <li>
+            <a href="/">The Downsides of AI Artistry</a>
+            <p>What are the possible adverse effects of on-demand AI image generation?</p>
+          </li>
+  
+  
+          <li>
+              <a href="/">Is VC Funding Drying Up?</a>
+              <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="featured">
+        <h3>Featured articles</h3>
+        <ol>
+          <li>
+            <img src="assets/images/image-retro-pcs.jpg" alt="">
+            <div class="retro">
+              <a href="/">Reviving Retro PCs</a>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </li>
+  
+          <li>
+            <img src="assets/images/image-top-laptops.jpg" alt="">
+            <div class="laptop">
+              <a href="/">Top 10 Laptops of 2022</a>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
+          </li>
+  
+          <li>
+            <img src="assets/images/image-gaming-growth.jpg" alt="">
+            <div class="growth">
+              <a href="/">The Growth of Gaming</a>
+              <p>How the pandemic has sparked fresh opportunities</p>
+            </div>
+          </li>
+        </ol>
+      
+      </section>
       
     </main>
-
-    <aside id="new" aria-label="new tech innovations" class="new">
-
-      <h2>New</h2>
-
-      <ul>
-        <li>
-          <a href="/">Hydrogen VS Electric Cars</a>
-          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-        </li>
-
-
-        <li>
-          <a href="/">The Downsides of AI Artistry</a>
-          <p>What are the possible adverse effects of on-demand AI image generation?</p>
-        </li>
-
-
-        <li>
-            <a href="/">Is VC Funding Drying Up?</a>
-            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-        </li>
-      </ul>
-            
-    </aside>
-
-    <section aria-label="featured articles" class="featured">
-
-      <ul>
-        <li>
-          <img src="assets/images/image-retro-pcs.jpg" alt="">
-          <div>
-            <h3>01</h3>
-            <a href="/">Reviving Retro PCs</a>
-            <p>What happens when old PCs are given modern upgrades?</p>
-          </div>
-          
-        </li>
-
-        <li>
-          <img src="assets/images/image-top-laptops.jpg" alt="">
-          <div>
-            <h3>02</h3>
-            <a href="/">Top 10 Laptops of 2022</a>
-            <p>Our best picks for various needs and budgets.</p>
-          </div>
-          
-        </li>
-
-        <li>
-          <img src="assets/images/image-gaming-growth.jpg" alt="">
-          <div>
-            <h3>03</h3>
-            <a href="/">The Growth of Gaming</a>
-            <p>How the pandemic has sparked fresh opportunities</p>
-          </div>
-          
-        </li>
-      </ul>
-    
-    </section>
       
   </body>
 </html>
