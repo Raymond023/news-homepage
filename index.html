@@ -15,7 +15,7 @@
     <header>
       <div>
         <a class="logo" aria-label="Tech news homepage" href="/"><img src="assets/images/logo.svg" alt=""></a>
-        <button type="button" class="open-nav" aria-haspopup="dialog" aria-label="menu"></button>
+        <button type="button" class="open-nav" aria-expanded="false" aria-haspopup="dialog" aria-label="menu"></button>
       </div>
       
       <dialog aria-label="primary navigation" aria-modal="true" class="nav-dialog" id="nav-dialog">
@@ -31,6 +31,8 @@
           </ul>
         </nav>
 
+        
+
       </dialog>
       
       
@@ -42,8 +44,10 @@
         <source srcset="assets/images/image-web-3-mobile.jpg" media="(min-width: 320px)">
         <img src="assets/images/image-web-3-mobile.jpg" alt="">
       </picture>      
+      <h1 class="sr-only">Tech news homepage</h1>
+      <h2 class="sr-only">Featured content</h2>
       
-      <h1>The Bright Future of Web 3.0?</h1>
+      <h3 class="intro">The Bright Future of Web 3.0?</h3>
       <div>
       <p>
         We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
@@ -76,12 +80,13 @@
       </section>
 
       <section class="featured">
-        <h3>Featured articles</h3>
+        <h2>Featured articles</h2>
         <ol>
           <li>
             <img src="assets/images/image-retro-pcs.jpg" alt="">
             <div class="retro">
-              <a href="/">Reviving Retro PCs</a>
+              <h3><a href="/">Reviving Retro PCs</a></h3>
+
               <p>What happens when old PCs are given modern upgrades?</p>
             </div>
           </li>
@@ -89,7 +94,7 @@
           <li>
             <img src="assets/images/image-top-laptops.jpg" alt="">
             <div class="laptop">
-              <a href="/">Top 10 Laptops of 2022</a>
+              <h3><a href="/">Top 10 Laptops of 2022</a></h3>
               <p>Our best picks for various needs and budgets.</p>
             </div>
           </li>
@@ -97,7 +102,7 @@
           <li>
             <img src="assets/images/image-gaming-growth.jpg" alt="">
             <div class="growth">
-              <a href="/">The Growth of Gaming</a>
+              <h3><a href="/">The Growth of Gaming</a></h3>
               <p>How the pandemic has sparked fresh opportunities</p>
             </div>
           </li>
